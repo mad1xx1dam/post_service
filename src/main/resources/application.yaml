@@ -28,6 +28,9 @@ spring:
       channels:
         calculations_channel:
           name: calculations_channel
+      topic:
+        user-ban: user_ban
+
 
 expired:
   ad:
@@ -62,3 +65,6 @@ minio:
   url: "${MINIO_URL: http://localhost:9000}"
   user: ${MINIO_USER:user}
   password: ${MINIO_PASSWORD:password}
+
+moderation:
+  cron-ban-user: "0 30 3 * * ?"
