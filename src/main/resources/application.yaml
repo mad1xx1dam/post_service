@@ -53,6 +53,8 @@ project-service:
 payment-service:
   host: localhost
   port: 9080
+like-service:
+  batch-size: 100
 
 aws:
   url: http://localhost:9000
@@ -63,3 +65,4 @@ aws:
 image:
   smallImageSize: 170
   largeImageSize: 1080
+
