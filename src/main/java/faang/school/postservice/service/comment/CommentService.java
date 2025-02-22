@@ -1,6 +1,8 @@
 package faang.school.postservice.service.comment;
 
+import faang.school.aspect.CreateComment;
 import faang.school.postservice.client.UserServiceClient;
+import faang.school.postservice.dto.user.UserDto;
 import faang.school.postservice.exception.UserUnauthorizedAccessException;
 import faang.school.postservice.model.Comment;
 import faang.school.postservice.model.Post;
@@ -26,6 +28,7 @@ public class CommentService {
     private final CommentRepository commentRepository;
     private final PostService postService;
 
+    @CreateComment
     @Transactional
     public Comment createComment(Comment comment, Long postId) {
         getUser(comment.getAuthorId());

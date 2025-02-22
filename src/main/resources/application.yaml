@@ -99,3 +99,8 @@ post-service:
       cron: "0 * * * * *"
     batch-size: 1000
     thread-amount: 10
+
+kafka:
+  bootstrap-servers: localhost:9092
+  topic:
+    comment: user-comment-post
