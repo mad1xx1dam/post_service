@@ -12,7 +12,6 @@ import org.springframework.beans.factory.annotation.Value;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.collections4.ListUtils;
 import org.springframework.stereotype.Service;
-import jakarta.annotation.PostConstruct;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,11 +27,6 @@ public class LikeServiceImpl implements LikeService {
 
     @Value("${like-service.batch-size}")
     private int batchSize;
-
-    @PostConstruct
-    public void init() {
-        log.info("Batch size from configuration: {}", batchSize);
-    }
 
     @Override
     public List<UserDto> getUsersWhoLikedPost(Long postId) {
