@@ -5,6 +5,9 @@ spring:
     username: user
     password: password
 
+  kafka:
+    user-ban-topic: user-events
+
   servlet:
     multipart:
       max-file-size: 5MB
@@ -51,6 +54,7 @@ logging:
 
 moderation:
   dictionary: classpath:obscene_words.txt
+  cron-ban-user: "0 30 3 * * ?"
 
 user-service:
   host: localhost
@@ -65,6 +69,3 @@ minio:
   url: "${MINIO_URL: http://localhost:9000}"
   user: ${MINIO_USER:user}
   password: ${MINIO_PASSWORD:password}
-
-moderation:
-  cron-ban-user: "0 30 3 * * ?"

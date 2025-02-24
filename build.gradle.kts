@@ -29,6 +29,12 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-webflux")
 
     /**
+     * Kafka
+     */
+    implementation("org.springframework.kafka:spring-kafka")
+
+
+    /**
      * Database
      */
     implementation("org.liquibase:liquibase-core")
