@@ -46,9 +46,6 @@ logging:
   level:
     root: info
 
-moderation:
-  dictionary: classpath:obscene_words.txt
-
 user-service:
   host: localhost
   port: 8080
@@ -70,5 +67,6 @@ moderation:
   comment-limit: 500
   batch-size: 100
   cron: "0 0 3 * * ?"
-  dictionary:
+  dictionary: classpath:obscene_words.txt
+  dictionary-black:
     path: /moderation/blacklist.txt
