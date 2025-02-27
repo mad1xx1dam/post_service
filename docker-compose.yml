@@ -4,7 +4,7 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "8082:8082"
+      - "8081:8081"
     environment:
       # PostgreSQL
       SPRING_DATASOURCE_URL: jdbc:postgresql://host.docker.internal:5432/postgres
